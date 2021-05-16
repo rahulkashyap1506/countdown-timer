@@ -1,0 +1,32 @@
+<div [ngStyle]="imgStyle">
+    <!-- <div class="page" [ngStyle]="pageStyle" style="background: rgba(0, 0, 0, .2);"> -->
+    <div class="page" [ngStyle]="pageStyle">
+        <div class="message" [ngStyle]="messageStyle">
+            {{ message }}
+        </div>
+
+        <div class="container">
+            <div class="row time">
+                <div *ngIf="days > 0" class="col">
+                    <span [ngStyle]="digitStyle">{{ days }}</span><br>
+                    <span [ngStyle]="wordStyle">Days</span>
+                </div>
+                <div class="col">
+                    <span [ngStyle]="digitStyle">{{ hours | number:'2.0' }}</span><br>
+                    <span [ngStyle]="wordStyle">Hours</span>
+                </div>
+                <div class="col">
+                    <span [ngStyle]="digitStyle">{{ minutes | number:'2.0' }}</span><br>
+                    <span [ngStyle]="wordStyle">Minutes</span>
+                </div>
+                <div class="col">
+                    <span [ngStyle]="digitStyle">{{ seconds | number:'2.0' }}</span><br>
+                    <span [ngStyle]="wordStyle">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="time" [ngStyle]="digitStyle">
+        {{ days }} : {{ hours | number:'2.0' }} : {{ minutes | number:'2.0' }} : {{ seconds | number:'2.0' }}
+    </div> -->
+</div>
