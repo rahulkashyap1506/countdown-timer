@@ -18,7 +18,7 @@ export class EventComponent implements OnInit {
   milliseconds: number = 0;
   subscription!: Subscription;
   interval: number = 1000;
-  message: string = "Birthday party starts in";
+  message: string = "My Birthday starts in";
   imgStyle!: object;
   pageStyle!: object;
   messageStyle!: object;
@@ -28,7 +28,8 @@ export class EventComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.finalTime = new Date('2021-06-14T18:30:00Z').getTime();
+    let date: string = new Date().getFullYear() + '-06-14T18:30:00Z';
+    this.finalTime = new Date(date).getTime();
 
     this.update();
     const source = interval(this.interval);
