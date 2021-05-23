@@ -41,7 +41,7 @@ export class EventComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     
     this.imgStyle = {
-      'background-image': 'url(../../assets/images/Birthday.jpg)',
+      'background-image': 'url(assets/images/Birthday.jpg)',
       'height': this.screenHeight + 'px',
       'background-position': 'center',
       'background-repeat': 'no-repeat',
